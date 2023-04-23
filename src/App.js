@@ -54,7 +54,7 @@ function App() {
                 specialCharacters.map(sNumber => 
                   <div 
                     onClick={() => setInput(input + sNumber)}
-                    className='button'>
+                    className='button-special'>
                     <b>{sNumber}</b>
                   </div>
                 )
