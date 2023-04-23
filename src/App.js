@@ -3,12 +3,13 @@ import './App.css';
 
 function App() {
   const numbers = ['9', '8', '7', '6', '5', '4', '3', '2', '1', '0', '.']
-  const specialCharacters = ['/','*','-','+',];
+  const specialCharacters = ['/','*','-','+'];
   const [input, setInput] = useState('')
   const [answer, setAnswer] = useState(null)
 
   const validateList = () => {
     try{
+      // eval convert string to number with its characters
       setAnswer(eval(input))
     }catch(error){
       console.log('error', error)
@@ -26,7 +27,7 @@ function App() {
             input ? (<h2>{input}</h2>) : (<p>.</p>) 
           }
           {
-            answer ? (<h3 style={{color:'orange'}}>{answer}</h3>) : (<></>) 
+            answer ? (<h2 style={{color:'orange'}}>{answer}</h2>) : (<></>) 
           }
         </div>
         <div className='body-wrapper'> 
