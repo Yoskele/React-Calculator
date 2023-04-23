@@ -9,13 +9,12 @@ function App() {
 
   const validateList = () => {
     try{
-      // Learned from ChatGPT
-      //eval Takes our user input thats  a string '20+20' eval convert into a number with the right answer.
       setAnswer(eval(input))
     }catch(error){
       console.log('error', error)
     }
   }
+  // Remove the last element in the string.
   const deleteCharacter = () => {
     setInput(input.slice(0, -1));
   }
